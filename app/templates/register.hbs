@@ -1,1 +1,10 @@
-{{outlet}}
+{{!-- {{outlet}} --}}
+
+<div class="registerInput centered">
+    <BsForm @formLayout="vertical" @model={{this}} @onSubmit={{action "submit"}} as |form|>
+    <form.element @controlType="text" @label="Catchup Quiz!" @property="username" as |elementUsername|>
+        <elementUsername.control required placeholder="Game Username" />
+    </form.element>
+    <BsButton @defaultText="Submit" @type="primary" type="submit" />
+    </BsForm>
+</div>
